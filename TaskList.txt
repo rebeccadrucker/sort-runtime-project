@@ -1,0 +1,10 @@
++ finish minimal algorithms and submit
++ demo for Kruse
+- finish optimizing algorithms
+- write bad sort
+- create good sort
+- prepare hardware testing environments: 2 laptops, 2 computers
+- prepare software testing environments: Java & C++
+- create Excel sheet for data display
+- document test results
+- write report first draft
