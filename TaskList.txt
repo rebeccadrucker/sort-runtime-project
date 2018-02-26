@@ -1,10 +1,33 @@
 + finish minimal algorithms and submit
+
 + demo for Kruse
+
 - finish optimizing algorithms
+	- delete output
+	- globalize variables
+	- shorten variable names
+
+- edit algorithms to include runtime output
+
 - write bad sort
+
 - create good sort
+
 - prepare hardware testing environments: 2 laptops, 2 computers
+
 - prepare software testing environments: Java & C++
-- create Excel sheet for data display
-- document test results
+
+- create spreadsheet for data display
+
+- perform tests (4 computers * 2 languages * 5 sizes * 6+2 sorts): 320 tests D:
+	- 4*2*5*6 = 240 base tests (IS,SS,MS,QS)
+	- 4*5*2 = 40 stretch tests (GS,BS)
+	- 280 total tests D:
+
+- document test results in spreadsheet
+
 - write report first draft
+	- describe hypotheses/goals
+	- describe testing environments
+	- include summary graphs
+	- write analysis and conclusions
