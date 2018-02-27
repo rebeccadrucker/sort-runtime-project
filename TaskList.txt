@@ -11,11 +11,11 @@
 
 - write bad sort
 
-- create good sort
++ create good sort
 
-- prepare hardware testing environments: 2 laptops, 2 computers
++ prepare hardware testing environments: 2 laptops, 2 computers
 
-- prepare software testing environments: Java & C++
++ prepare software testing environments: Java & C++
 
 - create spreadsheet for data display
 
