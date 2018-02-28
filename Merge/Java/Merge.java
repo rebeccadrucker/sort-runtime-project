@@ -2,15 +2,17 @@
 //  Merge.java
 //  
 //
-//  Created by Owen Gallagher on 2/25/18.
+//  Created by Owen Gallagher & Rebecca Drucker on 2/25/18.
 //
 //
 
 import java.lang.Math;
 
 public class Merge {
-    public static int n = 10;
-    public static int[] A;
+    static int n = 10;
+    static int[] A;
+    
+    static int[] B;
 
     public static void describe() {
         System.out.print("A: ");
@@ -24,7 +26,6 @@ public class Merge {
 
     public static void merge(int start, int end) {
         int length = end-start;
-        int[] B = new int[length];
         
         if (length > 1) {
             int middle = (int) Math.floor((start+end) / 2);
@@ -96,8 +97,9 @@ public class Merge {
 
     public static void main(String[] args) {
         A = new int[n];
+        B = new int[n];
         
-        System.out.println("Merge sort of n=" + n + " elements.");
+        System.out.println("JAVA merge sort of n=" + n + " elements.");
         
         for (int i=0; i<n; i++) {
             A[i] = (int) Math.round(Math.random() * 100);

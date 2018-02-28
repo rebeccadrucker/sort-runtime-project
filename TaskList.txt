@@ -2,14 +2,21 @@
 
 + demo for Kruse
 
-- finish optimizing algorithms
-	- delete output
-	- globalize variables
-	- shorten variable names
+- finish optimizing algorithms: delete output, globalize, n=10
+	+ Insertion
+	+ Selection
+	+ Merge
+	- Quick
+	- Good
 
-- edit algorithms to include runtime output
+- edit algorithms to include: runtime, n=100*10^[1,2,3,4,5]
+	- Insertion
+	- Selection
+	- Merge
+	- Quick
+	- Good
 
-- write bad sort
+? write bad sort
 
 + create good sort
 

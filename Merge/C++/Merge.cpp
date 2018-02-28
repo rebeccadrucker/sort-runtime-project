@@ -2,7 +2,7 @@
 //  Merge.cpp
 //  
 //
-//  Created by Owen Gallagher on 2/14/18.
+//  Created by Owen Gallagher & Rebecca Drucker on 2/14/18.
 //
 //
 
@@ -12,6 +12,8 @@
 using namespace std;
 int n = 10;
 int* A;
+
+int* B;
 
 void describe() {
     cout << "A: ";
@@ -23,9 +25,8 @@ void describe() {
     cout << endl;
 }
 
-void merge(int start, int end) {
+void merge(int start, int end) { //needs local vars because of recursion
     int length = end-start;
-    int* B = new int[length];
     
     if (length > 1) {
         int middle = floor((start+end) / 2);
@@ -81,8 +82,6 @@ void merge(int start, int end) {
     else {
         cout << "TRIVIAL MERGE: " << start << ".." << end << endl;
     }
-    
-    delete [] B;
 }
 
 void mergeSort(int start,int end) {
@@ -99,8 +98,9 @@ void mergeSort(int start,int end) {
 
 int main() {
     A = new int[n];
+    B = new int[n];
     
-    cout << "Merge sort of n=" << n << " elements." << endl;
+    cout << "C++ merge sort of n=" << n << " elements." << endl;
     
     srand(time(nullptr));
     
@@ -113,6 +113,7 @@ int main() {
     describe();
     
     delete [] A;
+    delete [] B;
     
     return 0;
 }

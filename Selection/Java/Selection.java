@@ -1,44 +1,52 @@
-/* Rebecca Drucker & Owen Gallagher
-   SelectionSort.java
+/* 
+    Rebecca Drucker & Owen Gallagher
+    SelectionSort.java
  */
 
-public class SelectionSort {
-    static int N = 5;
+public class Selection {
+    static int N = 10;
     static int A[] = new int[N];
+    
+    static int minIndex = 0;   //next smallest
+    static int temp = 0;       //for swaps
+    
+    public static void describe() {
+        System.out.print("A: ");
+        for (int i = 0; i < N; i++){
+            System.out.print(A[i] + " ");
+        }
+        System.out.println();
+    }
 
     public static void selectionSort(){
-        for (int i = 0; i < A.length - 1; i++){
-            int minIndex = i;
-            for (int j = i + 1; j < A.length; j++) {
+        for (int i = 0; i < N - 1; i++){
+            minIndex = i;
+            for (int j = i + 1; j < N; j++) {
                 if (A[j] < A[minIndex]){
                     minIndex = j;
                 }
             }
 
-            int temp = A[i];
+            temp = A[i];
             A[i] = A[minIndex];
             A[minIndex] = temp;
         }
     }
 
     public static void main(String[] args){
+        System.out.println("JAVA selection sort of n=" + N + " elements.");
+        
         // set up A
-        for (int i = 0; i < A.length; i++){
+        for (int i = 0; i < N; i++){
             A[i] = (int)(Math.random() * 100);
         }
 
         // print unsorted A
-        for (int i = 0; i < A.length; i++){
-            System.out.println(A[i]);
-        }
-
-        System.out.println();
+        describe();
 
         selectionSort();
 
         // print sorted A
-        for (int i = 0; i < A.length; i++){
-            System.out.println(A[i]);
-        }
+        describe();
     }
 }
