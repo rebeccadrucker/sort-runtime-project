@@ -13,10 +13,8 @@
 	- Insertion
 	- Selection
 	- Merge
-	- Quick
+	+ Quick
 	- Good
-
-? write bad sort
 
 + create good sort
 
@@ -24,7 +22,12 @@
 
 + prepare software testing environments: Java & C++
 
-- create spreadsheet for data display
++ create spreadsheet for data display
+
++ modify C++ algorithms to use random ints to Integer.MAX_VALUE
+	+ write RandomArray.java
+	+ copy for every C++ program
+	+ modify every C++ program to use random_numbers.txt
 
 - perform tests (4 computers * 2 languages * 5 sizes * 6+2 sorts): 320 tests D:
 	- 4*2*5*6 = 240 base tests (IS,SS,MS,QS)
@@ -32,6 +35,11 @@
 	- 280 total tests D:
 
 - document test results in spreadsheet
+	- Insertion
+	- Selection
+	- Merge
+	- Quick
+	- Good
 
 - write report first draft
 	- describe hypotheses/goals

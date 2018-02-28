@@ -9,6 +9,9 @@
 
 #include <iostream>
 #include <math.h>
+#include <ctime>
+#include <iomanip>
+#include <fstream>
 
 using namespace std;
 
@@ -19,10 +22,22 @@ int spot = 0; //space to insert in A
 int temp = 0; //memory for swaps
 
 void fill() {
-    srand(time(nullptr));
+    ifstream reader;
+    reader.open("./random_numbers.txt");
     
-    for (int i=0; i<N; i++) {
-        A[i] = round(rand() % 100);
+    if (!reader) {
+        cout << "ERROR: couldn't fill array" << endl;
+        exit(1);
+    }
+    else {
+        int i=0;
+        int x;
+        while (i<N && (reader >> x)) {
+            A[i] = x;
+            i++;
+        }
+        
+        reader.close();
     }
 }
 

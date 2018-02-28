@@ -9,6 +9,9 @@
 
 #include <iostream>
 #include <math.h>
+#include <ctime>
+#include <iomanip>
+#include <fstream>
 
 using namespace std;
 
@@ -45,17 +48,33 @@ void selectionSort() {
     }
 }
 
+void fill() {
+    ifstream reader;
+    reader.open("./random_numbers.txt");
+    
+    if (!reader) {
+        cout << "ERROR: couldn't fill array" << endl;
+        exit(1);
+    }
+    else {
+        int i=0;
+        int x;
+        while (i<n && (reader >> x)) {
+            A[i] = x;
+            i++;
+        }
+        
+        reader.close();
+    }
+}
+
 int main() {
     A = new int[n];
     
     cout << "C++ selection sort of n=" << n << " elements." << endl;
     
     //fill A
-    srand(time(nullptr));
-    
-    for (int i=0; i<n; i++) {
-        A[i] = round(rand() % 100);
-    }
+    fill();
     
     //unsorted
     describe();

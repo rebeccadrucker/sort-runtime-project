@@ -10,6 +10,7 @@
 #include <math.h>
 #include <ctime>
 #include <iomanip>
+#include <fstream>
 
 using namespace std;
 int n = 1000;
@@ -57,14 +58,32 @@ void quickSort(int start,int end) { //get sorted element, sort left, sort right
     }
 }
 
+void fill() {
+    ifstream reader;
+    reader.open("./random_numbers.txt");
+    
+    if (!reader) {
+        cout << "ERROR: couldn't fill array" << endl;
+        exit(1);
+    }
+    else {
+        int i=0;
+        int x;
+        while (i<n && (reader >> x)) {
+            A[i] = x;
+            i++;
+        }
+        
+        reader.close();
+    }
+}
+
 int main() {
     cout << "C++ quick sort of n=" << n << " elements." << endl;
     
     srand(time(NULL));
     
-    for (int i=0; i<n; i++) {
-        A[i] = rand();
-    }
+    fill();
     
 //    describe();
     
