@@ -58,28 +58,6 @@ public class Merge {
             for (int i=start; i<end; i++) {
                 A[i] = B[i-start];
             }
-            
-            System.out.print("merge ");
-            
-            for (int i=0; i<n; i++) {
-                if (i < start) {
-                    System.out.print(".");
-                }
-                else if (i == start || i == end-1) {
-                    System.out.print("|");
-                }
-                else if (i > start && i < end-1) {
-                    System.out.print("_");
-                }
-                else {
-                    System.out.print(".");
-                }
-            }
-            
-            System.out.print("\n");
-        }
-        else {
-            System.out.println("TRIVIAL MERGE: " + start + ".." + end);
         }
     }
 

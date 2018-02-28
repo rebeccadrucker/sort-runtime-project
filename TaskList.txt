@@ -6,7 +6,7 @@
 	+ Insertion
 	+ Selection
 	+ Merge
-	- Quick
+	+ Quick
 	- Good
 
 - edit algorithms to include: runtime, n=100*10^[1,2,3,4,5]

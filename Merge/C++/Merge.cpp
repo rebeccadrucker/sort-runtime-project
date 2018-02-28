@@ -59,28 +59,6 @@ void merge(int start, int end) { //needs local vars because of recursion
         for (int i=start; i<end; i++) {
             A[i] = B[i-start];
         }
-        
-        cout << "merge ";
-        
-        for (int i=0; i<n; i++) {
-            if (i < start) {
-                cout << ".";
-            }
-            else if (i == start || i == end-1) {
-                cout << "|";
-            }
-            else if (i > start && i < end-1) {
-                cout << "_";
-            }
-            else {
-                cout << ".";
-            }
-        }
-        
-        cout << endl;
-    }
-    else {
-        cout << "TRIVIAL MERGE: " << start << ".." << end << endl;
     }
 }
 

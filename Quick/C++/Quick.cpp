@@ -8,10 +8,12 @@
 
 #include <iostream>
 #include <math.h>
+#include <ctime>
+#include <iomanip>
 
 using namespace std;
-int n = 10;
-int* A;
+int n = 1000;
+int* A = new int[n];
 
 void describe() {
     cout << "A: ";
@@ -41,21 +43,6 @@ int partition(int start, int end) { //return index of single sorted element
     A[i+1] = A[end];
     A[end] = temp;
     
-    for (int j=0; j<n; j++) {
-        if (j < start || j > end) {
-            if (A[j] <= 9) {
-                cout << ". ";
-            }
-            else {
-                cout << ".. ";
-            }
-        }
-        else {
-            cout << A[j] << " ";
-        }
-    }
-    cout << endl;
-    
     return i+1;
 }
 
@@ -68,23 +55,28 @@ void quickSort(int start,int end) { //get sorted element, sort left, sort right
     if (middle < end) {
         quickSort(middle+1,end);
     }
-    
 }
 
 int main() {
-    A = new int[n];
+    cout << "C++ quick sort of n=" << n << " elements." << endl;
     
-    cout << "Quick sort of n=" << n << " elements." << endl;
-    
-    srand(time(nullptr));
+    srand(time(NULL));
     
     for (int i=0; i<n; i++) {
-        A[i] = round(rand() % 100);
+        A[i] = rand();
     }
     
-    describe();
+//    describe();
+    
+    double before = clock();
     quickSort(0,n-1);
-    describe();
+    double after = clock();
+    double timeMS = (after - before) / ((double)(CLOCKS_PER_SEC)/1000);
+    
+    cout.precision(6);
+    cout  << "runtime: " << timeMS << "ms" << endl;
+    
+//    describe();
     
     delete [] A;
     
