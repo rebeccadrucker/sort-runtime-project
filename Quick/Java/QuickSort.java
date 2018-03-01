@@ -3,7 +3,7 @@
  */
 
 public class QuickSort {
-    static final int N = 10;
+    static final int N = 1000;
     static int A[] = new int[N];
     
     public static void describe() {
@@ -60,8 +60,13 @@ public class QuickSort {
         //print unsorted A
 //        describe();
         
-        
+        long before = System.nanoTime();
         quickSort(0, N-1);
+        long after = System.nanoTime();
+        
+        after -= before;
+        double timeMS = ((double) after) / 1000;
+        System.out.println("runtime: " + timeMS + "ms");
 
         // print sorted A
 //        describe();

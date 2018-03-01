@@ -90,7 +90,7 @@ int main() {
     double before = clock();
     quickSort(0,n-1);
     double after = clock();
-    double timeMS = (after - before) / ((double)(CLOCKS_PER_SEC)/1000);
+    double timeMS = (after - before) / (((double)CLOCKS_PER_SEC)/1000);
     
     cout.precision(6);
     cout  << "runtime: " << timeMS << "ms" << endl;

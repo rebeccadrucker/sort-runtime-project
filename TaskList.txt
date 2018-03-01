@@ -13,7 +13,9 @@
 	- Insertion
 	- Selection
 	- Merge
-	+ Quick
+	+ Quick (!?! see below !?!)
+		- C++: 	 0.17ms
+		- Java: 996.32ms
 	- Good
 
 + create good sort
