@@ -9,7 +9,7 @@ import java.util.Scanner;
 import java.lang.Math;
 
 public class InsertionSort {
-    public static int N = 1000; //number of elements in array A
+    public static int N = 1000000; //number of elements in array A
     public static int A[] = new int[N];
     
     public static int spot = 0; //space to insert in A
@@ -44,7 +44,7 @@ public class InsertionSort {
     }
     
     public static void main(String[] args) {
-        //System.out.println("This JAVA program performs insertion sort on an array of N=" + N + " ints.");
+        System.out.println("This JAVA program performs insertion sort on an array of N=" + N + " ints.");
         
         //fill A
         fill();
@@ -53,11 +53,13 @@ public class InsertionSort {
         //print();
  
         //sort A
-		long startTime = System.nanoTime();
+	long startTime = System.nanoTime();
         sort();
         long endTime = System.nanoTime();
-		double estTime = ((double)endTime - startTime)/1000000;
-		System.out.println("Program took " + estTime + " milliseconds to run.");
+
+	double estTime = ((double)endTime - startTime)/1000000;
+	System.out.println("Program took " + estTime + " milliseconds to run.");
+
         //print A AFTER
         //print();
     }
