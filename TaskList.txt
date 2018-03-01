@@ -2,19 +2,19 @@
 
 + demo for Kruse
 
-- finish optimizing algorithms: delete output, globalize, n=10
++ finish optimizing algorithms: delete output, globalize, n=10
 	+ Insertion
 	+ Selection
 	+ Merge
 	+ Quick
 	+ Good
 
-- edit algorithms to include: runtime, n=100*10^[1,2,3,4,5]
-	- Insertion
-	- Selection
++ edit algorithms to include: runtime, n=100*10^[1,2,3,4,5]
+	+ Insertion
+	+ Selection
 	+ Merge
 	+ Quick
-	- Good
+	+ Good
 
 + create good sort
 

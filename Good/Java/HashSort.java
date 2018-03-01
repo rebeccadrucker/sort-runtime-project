@@ -148,7 +148,7 @@ public class HashSort {
     }
     
     public static void main(String[] args) {
-        n = 40;
+        n = 100000;
         a = new int[n];
         hashed = new boolean[n];
         
@@ -156,13 +156,18 @@ public class HashSort {
         
         fill();
         
-        describe();
+        //describe();
         
         min = a[0]; //initialize stats
         range = min;
         
+	long before = System.nanoTime();
         hashSort();
+	long after = System.nanoTime();
+	
+	double timeMS = ((double)(after-before)) / 1000000;
+	System.out.println("runtime: " + timeMS + "ms");
 
-        describe();
+        //describe();
     }
 }
