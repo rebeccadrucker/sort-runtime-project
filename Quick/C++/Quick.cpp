@@ -13,7 +13,7 @@
 #include <fstream>
 
 using namespace std;
-int n = 1000;
+int n = 10000000;
 int* A = new int[n];
 
 void describe() {

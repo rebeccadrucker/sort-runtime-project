@@ -64,8 +64,7 @@ public class QuickSort {
         quickSort(0, N-1);
         long after = System.nanoTime();
         
-        after -= before;
-        double timeMS = ((double) after) / 1000;
+        double timeMS = ((double)(after-before)) / 1000000; //1ms = 1,000,000ns
         System.out.println("runtime: " + timeMS + "ms");
 
         // print sorted A

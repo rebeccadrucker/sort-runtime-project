@@ -7,15 +7,13 @@
 	+ Selection
 	+ Merge
 	+ Quick
-	- Good
+	+ Good
 
 - edit algorithms to include: runtime, n=100*10^[1,2,3,4,5]
 	- Insertion
 	- Selection
-	- Merge
-	+ Quick (!?! see below !?!)
-		- C++: 	 0.17ms
-		- Java: 996.32ms
+	+ Merge
+	+ Quick
 	- Good
 
 + create good sort

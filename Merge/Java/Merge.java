@@ -9,7 +9,7 @@
 import java.lang.Math;
 
 public class Merge {
-    static int n = 10;
+    static int n = 10000000;
     static int[] A;
     
     static int[] B;
@@ -83,8 +83,15 @@ public class Merge {
             A[i] = (int) Math.round(Math.random() * 100);
         }
         
-        describe();
+//        describe();
+        
+        long before = System.nanoTime();
         mergeSort(0,n);
-        describe();
+        long after = System.nanoTime();
+        
+        double timeMS = ((double)(after-before)) / 1000000;
+        System.out.println("runtime: " + timeMS + "ms");
+        
+//        describe();
     }
 }

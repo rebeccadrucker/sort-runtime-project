@@ -13,7 +13,7 @@
 #include <fstream>
 
 using namespace std;
-int n = 10;
+int n = 10000000;
 int* A = new int[n];
 int* B = new int[n];
 
@@ -103,7 +103,13 @@ int main() {
     
 //    describe();
     
+    double before = clock();
     mergeSort(0,n);
+    double after = clock();
+    double timeMS = (after - before) / (((double)CLOCKS_PER_SEC)/1000);
+    
+    cout.precision(6);
+    cout  << "runtime: " << timeMS << "ms" << endl;
     
 //    describe();
     
