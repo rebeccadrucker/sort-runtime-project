@@ -4,7 +4,7 @@
  */
 
 public class SelectionSort {
-    static int N = 1000;
+    static int N = 1000000;
     static int A[] = new int[N];
     
     static int minIndex = 0;   //next smallest

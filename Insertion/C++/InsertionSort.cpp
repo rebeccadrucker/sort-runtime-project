@@ -15,7 +15,7 @@
 
 using namespace std;
 
-int N = 10; //number of elements in array A
+int N = 1000; //number of elements in array A
 int* A = new int[N];
 
 int spot = 0; //space to insert in A
@@ -70,13 +70,20 @@ int main() {
     fill();
    
     //print A BEFORE
-    print();
+    //print();
 
     //sort A
-    sort();
+	double before = clock();
+	sort();
+	double after = clock();
+
+	double timeMS = (after-before) / (((double)CLOCKS_PER_SEC)/1000);
+
+	cout.precision(6);
+	cout << "runtime: " << timeMS << "ms" << endl;
     
     //print A AFTER
-    print();
+    //print();
     
     return 0;
 }

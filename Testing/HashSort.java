@@ -12,7 +12,7 @@ public class HashSort {
     public static int n;                //size of array
     public static int[] a;              //array to be sorted
     
-    public static int i=0;                            //indeces
+    public static int i=0;              //indeces
     public static int j=0;
     
     public static int temp;             //for swaps
@@ -146,7 +146,7 @@ public class HashSort {
     }
     
     public static void main(String[] args) {
-        n = 1000;
+        n = 1000000;
         a = new int[n];
         hashed = new boolean[n];
         

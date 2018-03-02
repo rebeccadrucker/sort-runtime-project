@@ -15,7 +15,7 @@
 
 using namespace std;
 
-int n = 10;
+int n = 1000;
 int* A;
 
 int minIndex = 0;   //next smallest
@@ -77,12 +77,19 @@ int main() {
     fill();
     
     //unsorted
-    describe();
+//    describe();
     
+    double before = clock();
     selectionSort();
+    double after = clock();
+    
+    double timeMS = (after-before) / (((double)CLOCKS_PER_SEC)/1000);
+    
+    cout.precision(6);
+    cout << "runtime: " << timeMS << "ms" << endl;
     
     //sorted
-    describe();
+//    describe();
     
     return 0;
 }

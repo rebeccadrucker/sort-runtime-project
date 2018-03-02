@@ -16,7 +16,7 @@
 	+ Quick
 	+ Good
 
-+ create good sort
++ create good sort (HashSort)
 
 + prepare hardware testing environments: 2 laptops, 2 computers
 
@@ -37,9 +37,9 @@
 - document test results in spreadsheet
 	- Insertion
 	- Selection
-	- Merge
-	- Quick
-	- Good
+	+ Merge
+	+ Quick
+	- Hash
 
 - write report first draft
 	- describe hypotheses/goals
