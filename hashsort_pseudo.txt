@@ -1,0 +1,87 @@
+    checkLeft(int start, int startValue) { //j from start to (1st hashed > startValue).index -> newDest
+        j=start
+        if (a[start] > startValue):
+            newDest = start
+        else:
+            newDest = -1
+
+        confirmed = false
+        while (!confirmed):
+            while (j>0 && !hashed[j]):
+                j--
+            
+            if (a[j] > startValue):
+                if (hashed[j]):
+                    newDest = j
+                if (j==0):
+                    confirmed = true
+                else:
+                    j--
+            else:
+                confirmed = true
+    
+    checkRight(int start, int startValue) …
+    
+    shiftLeft(int start, int end):
+        j=start+1
+        while (j <= end):
+            a[j-1] = a[j]
+            j++
+    
+    shiftRight(int start, int end) …
+    
+    hashSort():
+        getMinRange()
+        i = 0
+        while (i < n):
+            if (!hashed[i]):
+                dest = (int)(((double) (a[i] - min)) / range * nMinus1)
+                
+                if (dest != i && hashed[dest]):
+                    if (a[i] < a[dest]):
+                        checkLeft(dest,a[i])
+                        if (i < newDest):
+                            shiftLeft(i,newDest-1)
+                            a[newDest-1] = a[i]
+                        else:
+                            shiftRight(i,newDest)
+                            a[newDest] = a[i]
+
+                    else if (a[i] > a[dest]):
+                        checkRight(dest,a[i])
+                        if (i > newDest):
+                            shiftRight(i,newDest+1)
+                            a[newDest+1] = a[i]
+                        else:
+                            shiftLeft(i,newDest)
+                            a[newDest] = a[i]
+
+                    else: //a[i] == a[dest]
+                        if (i < dest):
+                            shiftLeft(i,dest-1)
+                            a[dest-1] = a[i]
+                        else:
+                            shiftRight(i,dest+1)
+                            a[dest+1] = a[i]
+                else:
+                    swap(a[i],a[dest])
+
+                    checkLeft(dest, a[dest])
+                    
+                    if (newDest != -1):
+                        temp = a[dest]
+                        for (j=dest-1 to newDest):
+                            a[j+1] = a[j]
+                        a[newDest] = temp
+                      
+                    else:
+                        checkRight(dest, a[dest])
+
+                        if (newDest != -1):
+                            temp = a[dest]
+                            for (j=dest+1 to newDest):
+                                a[j-1] = a[j]
+                            a[newDest] = temp
+
+            else: //hashed[i]
+                i++

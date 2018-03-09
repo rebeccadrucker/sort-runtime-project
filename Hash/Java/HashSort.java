@@ -289,13 +289,13 @@ public class HashSort {
             else {
                 i++;
             }
-            //describe(false);
+//            describe(false);
         }
         
     }
     
     public static void main(String[] args) {
-        n = 1000;
+        n = 5000000;
         nMinus1 = n-1;
         a = new int[n];
         hashed = new boolean[n];
